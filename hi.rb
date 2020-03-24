@@ -7,5 +7,5 @@ class HelloWorld
    end
 end
 
-hello = HelloWorld.new("World")
+hello = HelloWorld.new("mundo")
 hello.sayHi
