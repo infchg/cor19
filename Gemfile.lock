@@ -1,17 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    spring (2.0.2)
-      activesupport (>= 4.2)
+ 
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  spring
+  dashing
 
 RUBY VERSION
-   ruby 2.4.4p296
+   ruby  
 
-BUNDLED WITH
-   1.17.3
+ 
