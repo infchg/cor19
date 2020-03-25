@@ -1,6 +1,6 @@
 # ruby tests dash
 
-deploying automatically to cloud via [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+deploying automatically to cloud app.rb or via [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
   see the [Getting Started on Heroku with Ruby](https://devcenter.heroku.com/articles/getting-started-with-ruby) article  
 
