@@ -1,5 +1,8 @@
-# This file is used by Rack-based servers to start the application.
+# This file is used by Rack-based servers  to start
 
-require './hi'
-#::File.expand_path('../config/environment',  __FILE__)
+#ex   require './hi'
 # run Rails.application
+
+require './app'
+run Sinatra::Application
+
