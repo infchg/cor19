@@ -6,6 +6,6 @@
   "keywords": ["ruby", "rails" ],
   "addons": ["heroku-postgresql"],
   "scripts": {
-        "predeploy": "bundle install"
+        "preinstall": "bundle install"
     }
 }
