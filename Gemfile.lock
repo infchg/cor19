@@ -30,7 +30,7 @@ GEM
       thor (~> 0.18.1)
 
 PLATFORMS
-  ruby
+  ruby (~> 2.6.5)
 
 DEPENDENCIES
   json
