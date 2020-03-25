@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby #265 '>= 2.5'
+ ruby  '>= 2.6.5'
 
  
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -10,4 +10,3 @@ gem 'json'
 gem 'thin'
 gem 'eventmachine'
  
-
