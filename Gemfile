@@ -1,12 +1,9 @@
 source 'https://rubygems.org'
- ruby  '>= 2.6.5'
-
+# ruby  '>= 2.6.5'
  
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'sinatra'
-gem 'dashing' 
-
-gem 'json'
-gem 'thin'
-gem 'eventmachine'
+gem 'dashing'
+gem 'faraday'
+gem 'chronic'
+gem 'rubocop', '~> 0.32.0'
+ 
  
