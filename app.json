@@ -4,8 +4,5 @@
   "image": "heroku/ruby",
   "repository": "https://github.com/infchg/cor19",
   "keywords": ["ruby", "rails" ],
-  "addons": ["heroku-postgresql"],
-  "scripts": {
-        "preinstall": "bundle install"
-    }
+  "addons": ["heroku-postgresql"] 
 }
