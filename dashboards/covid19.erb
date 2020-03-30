@@ -1,5 +1,5 @@
 <script type='text/javascript'>
-$(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1}]')
+$(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":0.6},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":3,"row":3,"size_x":1,"size_y":1}]')
 });
 </script>
 <% content_for :title do %>Covid Status Dashboard <% end %>
@@ -47,7 +47,6 @@ data-datasets="0,95,207,112,112,186,240,231,365,299,319,292"
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div
         data-id="e" data-view="Chartjs" data-type="line"
-        data-header="Activities After Work"
         data-header="deaths UK"
         data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29"
         data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
@@ -70,6 +69,8 @@ data-datasets="15,18,30,30,43,34,63,80,78,112,93,132"
       <div
         data-id="g" data-view="Chartjs" data-type="line"
         data-header="deaths Iran"
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
 data-datasets="147,149,149,123,129,127,122,143,157,144,139,123"
       ></div>
     </li>
@@ -79,7 +80,6 @@ data-datasets="147,149,149,123,129,127,122,143,157,144,139,123"
         data-id="h" data-view="Chartjs" data-type="line"
         data-header="deaths Germany"
         data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
         data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
 data-datasets="4,16,23,17,10,29,34,49,61,75,91,100"
       ></div>
