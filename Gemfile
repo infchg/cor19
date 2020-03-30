@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
- ruby  '>= 2.6.5'
- 
-gem 'dashing'
-gem 'faraday'
-gem 'chronic'
-gem 'rubocop', '~> 0.32.0'
-gem 'thin' 
- 
+ruby "2.4.4"
+
+gem 'smashing'
+
+## Remove this if you don't need a twitter widget.
+gem 'twitter', '>= 5.9.0'

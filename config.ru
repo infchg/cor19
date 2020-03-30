@@ -1,20 +1,11 @@
-# This file is used by Rack-based servers  to start
-
-#ex1   require './hi'
-# run Rails.application
-
-#ex2   require './app'
-#run Sinatra::Application
-
-#ex3   
-require './hello'
-run HelloApp
-
-#ex4
 require 'dashing'
 
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
+
+  # See http://www.sinatrarb.com/intro.html > Available Template Languages on
+  # how to add additional template languages.
+  set :template_languages, %i[html erb]
 
   helpers do
     def protected!
@@ -29,4 +20,3 @@ map Sinatra::Application.assets_prefix do
 end
 
 run Sinatra::Application
-
