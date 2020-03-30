@@ -13,7 +13,7 @@ Dashing.on 'ready', ->
   ## Dashing.widget_base_dimensions ||= [300, 360]
   ## .Dashing.numColumns ||= 4
   ## put
-  Dashing.widget_base_dimensions ||= [320, 230]
+  Dashing.widget_base_dimensions ||= [320, 180]
   Dashing.numColumns ||= 3
   
 
