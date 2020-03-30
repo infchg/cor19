@@ -1,7 +1,7 @@
-<!--script type='text/javascript'>
+<script type='text/javascript'>
 $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1}]')
 });
-</script -->
+</script>
 <% content_for :title do %>Covid Status Dashboard <% end %>
 <div class="gridster">
   <ul>
@@ -16,23 +16,21 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <p>Scatter Chart</p>
       <div
-        data-id="scatter-chart"
+        data-id="b"
         data-view="Chartjs"
         data-type="line"
         data-header="Random points"
         data-colornames="blue,blue,blue,blue,blue"
-        data-datasets='[{"x": -10, "y": 0}, {"x": 0, "y": 10}, {"x": 10, "y": 5}, {"x": -4, "y": 8}, {"x": 1, "y": -2}, {"x": -1, "y": 3}]'
+        data-datasets="21,39,120,94,19"
         data-height="200"
         data-width="300"
       ></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <p>Bar Chart</p>
       <div
-        data-id="bar-chart"
+        data-id="c"
         data-view="Chartjs"
         data-type="line"
         data-header="Calories Burned"
@@ -45,9 +43,8 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <p>Horizontal Bar Chart</p>
       <div
-        data-id="horizontal-bar-chart"
+        data-id="d"
         data-view="Chartjs"
         data-type="line"
         data-header="Calories Burned"
@@ -60,9 +57,8 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <p>Radar Chart</p>
       <div
-        data-id="radar-chart"
+        data-id="e"
         data-view="Chartjs"
         data-type="line"
         data-header="Activities After Work"
@@ -75,9 +71,8 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <p>Polar Area Chart</p>
       <div
-        data-id="chart-polarArea"
+        data-id="f"
         data-view="Chartjs"
         data-type="line"
         data-labels="Week 1,Week 2,Week 3,Week 4,Week 5"
@@ -89,9 +84,8 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <p>Pie Chart</p>
       <div
-        data-id="chart-pie"
+        data-id="g"
         data-view="Chartjs"
         data-type="line"
         data-labels="Pumpkin,Apple,Pizza,Rhubarb"
@@ -106,7 +100,5 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
 </div>
 
 <style type="text/css">
-  p {
-    text-align: center;
-  }
+  p { text-align: center; }
 </style>
