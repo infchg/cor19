@@ -1,98 +1,84 @@
 <script type='text/javascript'>
-$(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1}]')
+$(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1}]')
 });
 </script>
 <% content_for :title do %>Covid Status Dashboard <% end %>
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="line-chart" data-view="Chartjs" data-type="line" data-header="Motivation Level"
-        data-labels="Week 1,Week 2,Week 3,Week 4,Week 5"
-        data-colornames="blue,blue,blue,blue,blue"
-        data-datasets="10,39,20,49,87"
-        data-height="200"
-        data-width="300"
+      <div data-id="a" data-view="Chartjs" data-type="line" data-header="deaths Spain"
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
+        data-datasets=" 90,207,213,332,397,539,497,839,718,773,844,821"
       ></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div
-        data-id="b"
-        data-view="Chartjs"
-        data-type="line"
-        data-header="Random points"
-        data-colornames="blue,blue,blue,blue,blue"
-        data-datasets="21,39,120,94,19"
-        data-height="200"
-        data-width="300"
+        data-id="b" data-view="Chartjs" data-type="line"
+        data-header="deaths Italy"
+data-datasets="475,427,627,793,651,601,743,683,712,919,889,756"
       ></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div
-        data-id="c"
-        data-view="Chartjs"
-        data-type="line"
+        data-id="c" data-view="Chartjs" data-type="line"
         data-header="Calories Burned"
-        data-labels="Day 1,Day 2,Day 3,Day 4,Day 5"
-        data-colornames="yellow,yellow,yellow,yellow,yellow"
-        data-datasets="210,339,220,494,109"
-        data-height="200"
-        data-width="300"
+        data-header="deaths US"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
+data-datasets="10,82,44,63,110,140,149,236,267,372,445,441"
       ></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div
-        data-id="d"
-        data-view="Chartjs"
-        data-type="line"
-        data-header="Calories Burned"
-        data-labels="Day 1,Day 2,Day 3,Day 4,Day 5"
-        data-colornames="lightgray,lightgray,lightgray,lightgray,lightgray"
-        data-datasets="210,339,220,494,109"
-        data-height="200"
-        data-width="300"
+        data-id="d" data-view="Chartjs" data-type="line"
+        data-header="deaths France"
+data-datasets="0,95,207,112,112,186,240,231,365,299,319,292"
       ></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div
-        data-id="e"
-        data-view="Chartjs"
-        data-type="line"
+        data-id="e" data-view="Chartjs" data-type="line"
         data-header="Activities After Work"
-        data-labels="Crossfit,Yoga,Weight Lifting,Running,Swimming,Watching TV"
-        data-colornames="yellow,yellow,yellow,yellow,yellow,yellow"
-        data-datasets="210,339,220,234,311,494"
-        data-height="200"
-        data-width="300"
+        data-header="deaths UK"
+data-datasets="16,66,40,56,48,54,87,43,113,181,260,209"
       ></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div
-        data-id="f"
-        data-view="Chartjs"
-        data-type="line"
-        data-labels="Week 1,Week 2,Week 3,Week 4,Week 5"
-        data-colornames="blue,yellow,green,cyan,gray"
-        data-datasets="10,39,20,49,87"
-        data-height="200"
-        data-width="300"
+        data-id="f" data-view="Chartjs" data-type="line"
+        data-header="deaths Netherlands"
+data-datasets="15,18,30,30,43,34,63,80,78,112,93,132"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
       ></div>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div
-        data-id="g"
-        data-view="Chartjs"
-        data-type="line"
-        data-labels="Pumpkin,Apple,Pizza,Rhubarb"
-        data-colornames="red,green,yellow,gray"
-        data-datasets="13,32,40,20"
-        data-height="200"
-        data-width="300"
+        data-id="g" data-view="Chartjs" data-type="line"
+        data-header="deaths Iran"
+data-datasets="147,149,149,123,129,127,122,143,157,144,139,123"
+      ></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div
+        data-id="h" data-view="Chartjs" data-type="line"
+        data-header="deaths Germany"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red"
+data-datasets="4,16,23,17,10,29,34,49,61,75,91,100"
+      ></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div
+        data-id="i" data-view="Chartjs" data-type="line"
+        data-header="deaths Belgium"
+data-datasets="4,7,16,30,8,13,34,56,42,69,64,78"
       ></div>
     </li>
 
