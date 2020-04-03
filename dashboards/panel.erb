@@ -1,0 +1,100 @@
+<!--script type='text/javascript'>
+$(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":0.6},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":3,"row":3,"size_x":1,"size_y":1}]')
+});
+</script  no need will do 1 by 1 -->
+<% content_for :title do %>Covid Status Dashboard <% end %>
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="pa" data-view="Chartjs" data-type="line" data-header="INI .. "
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red,grey,blue,magenta"
+        data-datasets=" 90,207,213,332,397,539,497,839,718,773,844,821,913,748,923"
+      ></div>
+    </li>
+
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+      <div
+        data-id="pb" data-view="Chartjs" data-type="line"
+        data-header="SGM"
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red,grey,blue,magenta"
+data-datasets="475,427,627,793,651,601,743,683,712,919,889,756,812,837,727"
+      ></div>
+    </li>
+
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+      <div
+        data-id="pc" data-view="Chartjs" data-type="line"
+        data-header="Safi.."
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red,grey,blue,magenta"
+data-datasets="10,82,44,63,110,140,149,236,267,372,445,441,511,895,884"
+      ></div>
+    </li>
+
+    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div
+        data-id="pd" data-view="Chartjs" data-type="line"
+        data-header="NM"
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red,grey,blue,magenta"
+data-datasets="0,95,207,112,112,186,240,231,365,299,319,292,418,499,509"
+      ></div>
+    </li>
+
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <div
+        data-id="pe" data-view="Chartjs" data-type="line"
+        data-header="ap"
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red,grey,blue,magenta"
+data-datasets="16,66,40,56,48,54,87,43,113,181,260,209,180,381,563"
+      ></div>
+    </li>
+
+    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+      <div
+        data-id="pf" data-view="Chartjs" data-type="line"
+        data-header="Meet Skip Holidays"
+        data-labels="Mar18,Mar19,Mar20,Mar23,Mar24,Mar25,Mar26,Mar27,Mar30,Mar31,Apr1"
+        data-colornames="blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,grey,blue,magenta"
+data-datasets="5,1,0,4,3,8,7,2,3,5,1"
+       ></div>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div
+        data-id="pg" data-view="Chartjs" data-type="line"
+        data-header="TCplaces"
+        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1"
+        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,red,red,grey,blue,magenta"
+data-datasets="147,149,149,123,129,127,122,143,157,144,139,123,117,141,138"
+      ></div>
+    </li>
+
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+      <div
+        data-id="ph" data-view="Chartjs" data-type="line"
+        data-header="Stat 15m"
+        data-labels="9:15,9:30,9:45:10:00,10:15,10:30,10:45:11:00"
+        data-colornames="blue,blue,blue,blue,lightgray,lightgray,lightgray,blue"
+data-datasets="4,16,23,17,10,29,34,49"
+      ></div>
+    </li>
+
+    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+      <div
+        data-id="pi" data-view="Chartjs" data-type="line"
+        data-header="Web 15m"
+        data-colornames="gray,lightgray,lightgray,lightgray,lightgray,red,red,magenta"
+data-datasets="56,42,69,64,78,82,192,123"
+      ></div>
+    </li>
+
+  </ul>
+</div>
+
+<style type="text/css">
+  p { text-align: center; }
+</style>
