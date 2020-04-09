@@ -2,6 +2,7 @@
   "name": "Covid19 board on Heroku Ruby",
   "description": "COVID STATUS  app, on Heroku",
   "image": "heroku/ruby",
+      "success_url": "/covid19",
   "repository": "https://github.com/infchg/cor19",
   "keywords": ["ruby", "rails" ],
   "addons": ["heroku-postgresql"] 
