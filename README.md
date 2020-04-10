@@ -13,3 +13,5 @@ Live example: https://smashing-chartjs.herokuapp.com/sample (May take a minute, 
 
 
 Thanks to github an dheroku cpu and storage resources
+
+  COVID19 Daily Tracking to detect improvements or worsening by Country

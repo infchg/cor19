@@ -1,15 +1,8 @@
 SCHEDULER.every "2m" do |job|
-  send_event("chart3", {
-  	type: "bar",
-  	header: "C Burned",
-  	labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
-  	colorNames: ["yellow", "yellow", "yellow", "yellow", "yellow"],
-  	datasets: [21, 33, 22, 49, 10]
-  })
 
   send_event("bar-chart", {
   	type: "bar",
-  	header: "Ci bar-c Burned",
+  	header: "Chr2 bar i bar-c Burned",
   	labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
   	colorNames: ["yellow", "yellow", "yellow", "yellow", "yellow"],
         datasets: [21, 33, 22, 49, 10]*rand(1..5)
@@ -34,7 +27,14 @@ labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
     }
   ]
 
-  send_event('linechart', { labels: labels, datasets: data })
-  send_event('linechart2', { labels: labels, datasets: data })
+  send_event('chart', { labels: labels, datasets: data })
+  send_event('chart3', { labels: labels, datasets: data })
 
+  send_event("chart2", {
+  	type: "bar",
+  	header: "Chart1 Burned",
+  	labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+  	colorNames: ["yellow", "yellow", "yellow", "yellow", "yellow"],
+  	datasets: [21, 33, 22, 49, 10]
+  })
 end
