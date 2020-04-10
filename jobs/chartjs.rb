@@ -30,6 +30,9 @@ labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
   send_event('chart', { labels: labels, datasets: data })
   send_event('chart3', { labels: labels, datasets: data })
 
+  send_event('lin', { labels: labels, datasets: data })
+  send_event('lin2', { labels: labels, datasets: data })
+
   send_event("chart2", {
   	type: "bar",
   	header: "Chart1 Burned",
