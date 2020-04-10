@@ -9,14 +9,14 @@ cOY = [ 'rgba(205, 159, 132, 1)' ] * le
 cY = [ 'rgba(255, 206, 86, 1)' ] * le
 cYG = [ 'rgba(186, 186, 105, 1)' ] * le
 cG = [ 'rgba(56, 256, 205, 1)' ] * le
-cC =0 
-cB =0 
-cP =0 
-cV =0 
+cC = 'cyan'
+cB ='blue' 
+cP ='purple' 
+cV ='violet' 
  
-bcR =  [ 'rgba(255, 6, 20, 0.1)' ] * le
-bcO = [ 'rgba(225, 99, 32, 0.1)' ] * le 
-bcOY = [ 'rgba(205, 159, 132, 0.1)' ] * le 
+bcR =  [ 'rgba(255, 6, 20, 0.01)' ] * le
+bcO = [ 'rgba(225, 99, 32, 0.01)' ] * le 
+bcOY = [ 'rgba(205, 159, 132, 0.01)' ] * le 
 bcY = [ 'rgba(255, 206, 86, 0.1)' ] * le
 bcYG = [ 'rgba(156, 206, 105, 0.1)' ] * le
 bcG = [ 'rgba(56, 256, 205, 0.1)' ] * le
@@ -61,14 +61,44 @@ label: "Italy",
     }
   ]
 
-  hundred=thousand
+  hundred=  [
+    {
+label: "Belgium",
+ data: [4,7,16,30,8,13,34,56,42,69,64,78,82,192,123,183,132,140,164,185,403,205,283],
+      borderColor: cC,
+      backgroundColor: bcR,
+      borderWidth: 1,
+    },
+    {
+label: "Germany",
+ data: [4,16,23,17,10,29,34,49,61,75,91,100,112,130,145,187,168,169,140,226,206,333,258],
+      borderColor: cB,
+      backgroundColor: bcOY,
+      borderWidth: 1,
+    },
+    {
+label: "Netherlands",
+ data: [15,18,30,30,43,34,63,80,78,112,93,132,93,175,134,166,148,164,115,101,234,147,148],
+      borderColor: cP,
+      backgroundColor: bcY,
+      borderWidth: 1,
+    },
+    {
+label: "Iran",
+ data: [147,149,149,123,129,127,122,143,157,144,139,123,117,141,138,124,134,158,151,136,133,121,117],
+      borderColor: cV,
+      backgroundColor: bcYG,
+      borderWidth: 1,
+    }
+  ]
+
 
 SCHEDULER.every "5m", :first_in => 0   do |job|
 # NEED SCHEDULER.every '10m', :first_in => 0 do |job|
   #
   send_event('thousand', { labels: labels, datasets: thousand})
-#  send_event('hundred', { labels: labels, datasets: hundred})
-  send_event('hundred', { labels: labels, datasets: thousand})
+  send_event('hundred', { labels: labels, datasets: hundred})
+ # send_event('hundred', { labels: labels, datasets: thousand})
 
 end
 
@@ -76,12 +106,9 @@ end
 # grep -e datase -e header dashboards/covid19.erb | sed -E 's/.*aths (.*)/label: "\1,/;s/.*sets="(.*)"/ data: [\1],/'
 
 =begin  
-label: "Netherlands",
- data: [15,18,30,30,43,34,63,80,78,112,93,132,93,175,134,166,148,164,115,101,234,147,148],
-label: "Iran",
- data: [147,149,149,123,129,127,122,143,157,144,139,123,117,141,138,124,134,158,151,136,133,121,117],
-label: "Germany",
- data: [4,16,23,17,10,29,34,49,61,75,91,100,112,130,145,187,168,169,140,226,206,333,258],
-label: "Belgium",
- data: [4,7,16,30,8,13,34,56,42,69,64,78,82,192,123,183,132,140,164,185,403,205,283],
+
+
+ Brazil",
+ data: [25,23,42,39,84,35,86,41,78,122,133,131]
+
 =end
