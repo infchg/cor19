@@ -4,7 +4,8 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
 </script  no need will do 1 by 1 -->
 <% content_for :title do %>Covid Dashboard - Comparing by Groups <% end %>
 <div class="gridster">
-  Comparing by Group of countries: (for possible mitigations and emergency reactions) <a href=/covid19>other panels</a>
+  Comparing by Group of countries: (for possible mitigations and emergency reactions)
+  <small> <a href=/covid19> -> individual panels</a></small>
   <ul>
   <!-- 
     Alert : Countries in the range 500-2000 deaths/day , for improvements or worsening warning 
@@ -32,7 +33,7 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
 
 
   </ul>
-  data source: Daily published by John Hopkins,  calculated substracting from last day as <a href=http://github.com/infchg/cor19/>http://github.com/infchg/cor19/</a> 
+  <small> data source: Daily published by John Hopkins,  calculated substracting from last day as <a href=http://github.com/infchg/cor19/>http://github.com/infchg/COVID-19/</a> </small>
 </div>
 
 <style type="text/css">
