@@ -2,97 +2,29 @@
 $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":0.6},{"col":1,"row":3,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":2,"row":2,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":3,"row":3,"size_x":1,"size_y":1}]')
 });
 </script  no need will do 1 by 1 -->
-<% content_for :title do %>Covid Status Dashboard <% end %>
+<% content_for :title do %>Covid Dashboard - Comparing by Groups <% end %>
 <div class="gridster">
-  COVID19 Daily Tracking to detect improvements or worsening by Country
+  Comparing by the Group of countries: 
   <ul>
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="a" data-view="Chartjs" data-type="line" data-header="deaths Spain"
+  Alert : Countries in the range 500-2000 deaths/day , for improvements or worsening warning 
+
+<li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
+  <div data-id="thousand" data-view ="LineChart" data-left-margin="5" 
+ data-title=" Danger :  5 Countries with daily deaths over 500 "
+  data-moreinfo="comparing the thousand group" data-top-margin="10"></div>
+</li>
+
+  warnings : Countries in the range 100-500 deaths/day , to watch for improvements or worsening 
+    <li data-row="2" data-col="1" data-sizex="3" data-sizey="2">
+      <div
+   data-id="hundred" data-view ="LineChart" data-left-margin="5" 
+ data-title=" Warning group :  Countries with daily deaths over 100 "
+        data-header=" Warning group : "
         data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-        data-datasets=" 90,207,213,332,397,539,497,839,718,773,844,821,913,748,923,961,850,749,694,700,704,747,655"
       ></div>
     </li>
 
-    <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
-      <div
-        data-id="b" data-view="Chartjs" data-type="line"
-        data-header="deaths Italy"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="475,427,627,793,651,601,743,683,712,919,889,756,812,837,727,760,766,681,525,636,604,542,610"
-      ></div>
-    </li>
 
-    <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-      <div
-        data-id="c" data-view="Chartjs" data-type="line"
-        data-header="deaths US"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="10,82,44,63,110,140,149,236,267,372,445,441,511,895,884,1169,1161,1320,1212,1164,1939,1973,1783"
-      ></div>
-    </li>
-
-    <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-      <div
-        data-id="d" data-view="Chartjs" data-type="line"
-        data-header="deaths France"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="0,95,207,112,112,186,240,231,365,299,319,292,418,499,509,1355,1120,1053,518,833,1417,541,1341"
-      ></div>
-    </li>
-
-    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
-      <div
-        data-id="e" data-view="Chartjs" data-type="line"
-        data-header="deaths UK"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="16,66,40,56,48,54,87,43,113,181,260,209,180,381,563,569,684,708,621,439,786,938,881"
-      ></div>
-    </li>
-
-    <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
-      <div
-        data-id="f" data-view="Chartjs" data-type="line"
-        data-header="deaths Netherlands"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="15,18,30,30,43,34,63,80,78,112,93,132,93,175,134,166,148,164,115,101,234,147,148"
-       ></div>
-    </li>
-
-    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
-      <div
-        data-id="g" data-view="Chartjs" data-type="line"
-        data-header="deaths Iran"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="147,149,149,123,129,127,122,143,157,144,139,123,117,141,138,124,134,158,151,136,133,121,117"
-      ></div>
-    </li>
-
-    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
-      <div
-        data-id="h" data-view="Chartjs" data-type="line"
-        data-header="deaths Germany"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="4,16,23,17,10,29,34,49,61,75,91,100,112,130,145,187,168,169,140,226,206,333,258"
-      ></div>
-    </li>
-
-    <li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
-      <div
-        data-id="i" data-view="Chartjs" data-type="line"
-        data-header="deaths Belgium"
-        data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9"
-        data-colornames="blue,blue,blue,blue,blue,lightgray,lightgray,lightgray,lightgray,lightgray,magenta,magenta,magenta,red,red,red,grey,grey,grey,blue,blue,blue,red"
-data-datasets="4,7,16,30,8,13,34,56,42,69,64,78,82,192,123,183,132,140,164,185,403,205,283"
-      ></div>
-    </li>
 
   </ul>
 </div>
@@ -100,3 +32,4 @@ data-datasets="4,7,16,30,8,13,34,56,42,69,64,78,82,192,123,183,132,140,164,185,4
 <style type="text/css">
   p { text-align: center; }
 </style>
+
