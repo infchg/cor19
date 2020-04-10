@@ -14,13 +14,18 @@ cB ='blue'
 cP ='purple' 
 cV ='violet' 
  
-bcR =  [ 'rgba(255, 6, 20, 0.01)' ] * le
-bcO = [ 'rgba(225, 99, 32, 0.01)' ] * le 
-bcOY = [ 'rgba(205, 159, 132, 0.01)' ] * le 
-bcY = [ 'rgba(255, 206, 86, 0.1)' ] * le
-bcYG = [ 'rgba(156, 206, 105, 0.1)' ] * le
+bcR =  [ 'rgba(255, 6, 20, 0.07)' ] * le
+bcO = [ 'rgba(225, 99, 32, 0.06)' ] * le 
+bcOY = [ 'rgba(205, 159, 132, 0.05)' ] * le 
+bcY = [ 'rgba(255, 206, 86, 0.05)' ] * le
+bcYG = [ 'rgba(156, 206, 105, 0.05)' ] * le
 bcG = [ 'rgba(56, 256, 205, 0.1)' ] * le
  
+bcC = 'rgba(0, 250, 205, 0.06' 
+bcB ='rgba(0, 190, 105, 0.06' 
+bcP ='rgba(156, 90, 105, 0.06' 
+bcV ='rgba(156, 0, 205, 0.1' 
+
   thousand = [  
     {
 label: "US",
@@ -66,21 +71,28 @@ label: "Italy",
 label: "Belgium",
  data: [4,7,16,30,8,13,34,56,42,69,64,78,82,192,123,183,132,140,164,185,403,205,283],
       borderColor: cC,
-      backgroundColor: bcR,
+      backgroundColor: bcC,
       borderWidth: 1,
     },
     {
 label: "Germany",
  data: [4,16,23,17,10,29,34,49,61,75,91,100,112,130,145,187,168,169,140,226,206,333,258],
       borderColor: cB,
-      backgroundColor: bcOY,
+      backgroundColor: bcB,
       borderWidth: 1,
     },
     {
 label: "Netherlands",
  data: [15,18,30,30,43,34,63,80,78,112,93,132,93,175,134,166,148,164,115,101,234,147,148],
       borderColor: cP,
-      backgroundColor: bcY,
+      backgroundColor: bcP,
+      borderWidth: 1,
+    },
+    {
+ label: "Brazil",
+ data: [25,23,42,39,84,35,86,41,78,122,133,131]
+      borderColor: cV,
+      backgroundColor: bcV,
       borderWidth: 1,
     },
     {
@@ -92,11 +104,14 @@ label: "Iran",
     }
   ]
 
+opt = { tooltips: { mode: 'index', intersect: false, },
+				hover: { mode: 'nearest', intersect: true }
+}
 
 SCHEDULER.every "5m", :first_in => 0   do |job|
 # NEED SCHEDULER.every '10m', :first_in => 0 do |job|
   #
-  send_event('thousand', { labels: labels, datasets: thousand})
+  send_event('thousand', { labels: labels, datasets: thousand, options: opt })
   send_event('hundred', { labels: labels, datasets: hundred})
  # send_event('hundred', { labels: labels, datasets: thousand})
 
@@ -108,7 +123,5 @@ end
 =begin  
 
 
- Brazil",
- data: [25,23,42,39,84,35,86,41,78,122,133,131]
 
 =end
