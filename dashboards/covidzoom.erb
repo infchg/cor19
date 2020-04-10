@@ -4,17 +4,20 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
 </script  no need will do 1 by 1 -->
 <% content_for :title do %>Covid Dashboard - Comparing by Groups <% end %>
 <div class="gridster">
-  Comparing by the Group of countries: 
+  Comparing by Group of countries: (for possible mitigations and emergency reactions) 
   <ul>
-  Alert : Countries in the range 500-2000 deaths/day , for improvements or worsening warning 
-
+  <!-- 
+    Alert : Countries in the range 500-2000 deaths/day , for improvements or worsening warning 
+  -->
 <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
   <div data-id="thousand" data-view ="LineChart" data-left-margin="5" 
- data-title=" Danger :  5 Countries with daily deaths over 500 "
+ data-title=" Danger group : Five Countries with daily deaths over 500 "
   data-moreinfo="comparing the thousand group" data-top-margin="10"></div>
 </li>
 
+  <!-- 
   warnings : Countries in the range 100-500 deaths/day , to watch for improvements or worsening 
+  -->
     <li data-row="2" data-col="1" data-sizex="3" data-sizey="2">
       <div
    data-id="hundred" data-view ="LineChart" data-left-margin="5" 
@@ -27,6 +30,7 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
 
 
   </ul>
+  data source: Daily published by John Hopkins,  calculated substracting from last day as in infchg.github.com/COVID-19 
 </div>
 
 <style type="text/css">
