@@ -7,7 +7,7 @@ cR =  [ 'rgba(255, 6, 20, 1)' ] * le
 cO = [ 'rgba(225, 99, 32, 1)' ] * le 
 cOY = [ 'rgba(205, 159, 132, 1)' ] * le 
 cY = [ 'rgba(255, 206, 86, 1)' ] * le
-cYG = [ 'rgba(156, 106, 105, 1)' ] * le
+cYG = [ 'rgba(186, 186, 105, 1)' ] * le
 cG = [ 'rgba(56, 256, 205, 1)' ] * le
 cC =0 
 cB =0 
@@ -63,8 +63,9 @@ label: "Italy",
 
   hundred=thousand
 
-SCHEDULER.every "1m" do |job|
-
+SCHEDULER.every "5m", :first_in => 0   do |job|
+# NEED SCHEDULER.every '10m', :first_in => 0 do |job|
+  #
   send_event('thousand', { labels: labels, datasets: thousand})
 #  send_event('hundred', { labels: labels, datasets: hundred})
   send_event('hundred', { labels: labels, datasets: thousand})

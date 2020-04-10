@@ -1,4 +1,4 @@
-SCHEDULER.every "20m" do |job|
+SCHEDULER.every "10m" do |job|
 
   send_event("bar-chart", {
   	type: "bar",
