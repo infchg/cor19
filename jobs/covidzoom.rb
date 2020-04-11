@@ -90,7 +90,7 @@ label: "Netherlands",
     },
     {
  label: "Brazil",
- data: [0,0,0,0,0,0,0, 18,15,19,25,23,42,39,84,35,86,41,78,122,133,131,107],
+ data: [0,0,0,0,0,0,0,0, 18,15,19,  25,23,42,39,84,35,86],
       borderColor: cV,
       backgroundColor: bcV,
       borderWidth: 1,

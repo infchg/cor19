@@ -4,7 +4,8 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
 </script  no need will do 1 by 1 -->
 <% content_for :title do %>Covid Status Dashboard <% end %>
 <div class="gridster">
-  <ul>
+  COVID19 Daily Tracking to detect improvements or worsening by Country <small> <a href=/covidzoom> ->zoom panels</a></small>
+<ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="a" data-view="Chartjs" data-type="line" data-header="deaths Spain"
         data-labels="Mar18,Mar19,Mar20,Mar21,Mar22,Mar23,Mar24,Mar25,Mar26,Mar27,Mar28,Mar29,Mar30,Mar31,Apr1,Apr2,Apr3,Apr4,Apr5,Apr6,Apr7,Apr8,Apr9,Ap10"
@@ -93,7 +94,8 @@ data-datasets="4,7,16,30,8,13,34,56,42,69,64,78,82,192,123,183,132,140,164,185,4
       ></div>
     </li>
 
-  </ul>
+  </ul>  
+<small> data source: by John Hopkins. Calculations substracting last day: <a href=http://github.com/infchg/COVID-19/>http://github.com/infchg/COVID-19/</a> </small>
 </div>
 
 <style type="text/css">
