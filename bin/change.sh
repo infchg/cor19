@@ -2,6 +2,7 @@
 
 git show fe5290:dashboards/covid19.erb  | sed -E -f change.sed  >  ../dashboards/covid19.erb 
 
+ sed -E -f change.sed  bas > bas2
 
 git commit -am " $(date  +%m-%d -d -1day) "
 git diff --stat --cached origin/master
