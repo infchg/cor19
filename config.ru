@@ -23,7 +23,7 @@ configure do
     puts response.status
     puts '[Params]'
     p params
-    puts JSON.parse(request.body.read)
+    p body  # JSON.parse(request.body.read)
     puts "jc after - ]"
   end
 
