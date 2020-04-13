@@ -17,8 +17,8 @@ configure do
     end
   end
 
-  #jc Sinatra::Application.
-  after post '/widgets/:id' do
+  #jc Sinatra::Application.   post '/widgets/:id' do
+  after do 
     puts "jc after - resp"
     puts response.status
     puts '[Params]'
