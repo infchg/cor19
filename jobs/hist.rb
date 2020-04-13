@@ -20,9 +20,27 @@ Sinatra::Application.after post '/widgets/:id' do
 end
 =end
 
-SCHEDULER.every "15m", :first_in => 0   do |job|
+SCHEDULER.every "5m", :first_in => 0   do |job|
 
   puts('jc -- hist 15m info')
+  labels = [ "aa","b2","c3","d4" ]
+  data = [  
+      {
+        label: "Inin label",
+        data: [14,19,49,17],
+        borderColor: red,
+        backgroundColor: yellow,
+        borderWidth: 1,
+      }
+    ]
+  
+  opt = { tooltips: { mode: 'index', intersect: false, },
+                                  hover: { mode: 'nearest', intersect: true }
+  }
+  
+  send_event('pdl', { labels: labels, datasets: data, options: opt })
+  send_event('d1', { labels: 'hoy', datasets: '4' })
+  
 #ok  puts( settings.history.to_yaml)
 #OK almacena  puts( Sinatra::Application.settings.history.to_yaml)
 end

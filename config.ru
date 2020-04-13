@@ -18,8 +18,9 @@ configure do
   end
 
   before '/widgets/:id' do
-    puts '[jc: '
+    puts '[jc: ',params['id']
     puts request.body.read
+    p jclab
     puts 'jc: ]'
   end
 
@@ -31,7 +32,8 @@ configure do
        puts body  # JSON.parse(request.body.read)
        puts params['id'],"- after - ]"
        print body
-       ## TENGO ESTO SI : puts settings.history.to_yaml
+       ## TENGO ESTO SI : 
+       puts settings.history.class   to_yaml
        puts '[end afte]'
        #rompe if no yaml puts Sinatra::Application.settings.history[id]
     end   
@@ -48,7 +50,7 @@ configure do
     Sinatra::Application.settings.connections.each { |out| out << event }
   end
 
-
+  jclab={ }
 
 end
 
