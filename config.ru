@@ -25,7 +25,9 @@ configure do
        puts body  # JSON.parse(request.body.read)
        puts params['id'],"- after - ]"
        print body
-       #rompe ? puts Sinatra::Application.settings.history[id]
+       puts settings.history.to_yaml
+       puts '[end hist afte]'
+       #rompe if noy yaml puts Sinatra::Application.settings.history[id]
     end   
   end
 
@@ -33,7 +35,7 @@ configure do
   #overide
   def send_event(id, body, target=nil)
     body[:id] = id
-    puts "jc -",id, body, target
+    puts "jc -",id, body, target  ## JC OVE NEW
     body[:updatedAt] ||= Time.now.to_i
     event = format_event(body.to_json, target)
     Sinatra::Application.settings.history[id] = event unless target == 'dashboards'
