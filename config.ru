@@ -10,7 +10,7 @@ configure do
   # how to add additional template languages.
   set :template_languages, %i[html erb]
 
-  jclab= Hash.new {  }
+  jclab= Hash.new { 'var2' => [] }
 
   helpers do
     def protected!
@@ -23,7 +23,7 @@ configure do
     puts '[jc: ',params['id']
     puts request.body.read
     #p configure.jclab
-    jclab[ params['id'] ] =  request.body.read
+    jclab[ params['id'] ].push(  request.body.read  )
 
     p jclab
     puts 'jc: ]'
