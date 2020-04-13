@@ -16,6 +16,17 @@ configure do
       # This method is run before accessing any resource.
     end
   end
+
+  #jc Sinatra::Application.
+  after post '/widgets/:id' do
+    puts "jc after - resp"
+    puts response.status
+    puts '[Params]'
+    p params
+    puts JSON.parse(request.body.read)
+    puts "jc after - ]"
+  end
+
 end
 
 map Sinatra::Application.assets_prefix do

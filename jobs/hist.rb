@@ -9,7 +9,6 @@
   puts('query hi info')
   settings.history.to_yaml
 
-=end
 
 Sinatra::Application.after post '/widgets/:id' do
   puts "jc after - resp"
@@ -19,6 +18,7 @@ Sinatra::Application.after post '/widgets/:id' do
   puts JSON.parse(request.body.read)
   puts "jc after - ]"
 end
+=end
 
 SCHEDULER.every "5m", :first_in => 0   do |job|
 
