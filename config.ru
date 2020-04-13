@@ -22,7 +22,7 @@ configure do
   before '/widgets/:id' do
     puts '[jc: ',params['id']
     puts request.body.read
-    p configure.jclab
+    #p configure.jclab
     p jclab
     puts 'jc: ]'
   end
