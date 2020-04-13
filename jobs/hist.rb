@@ -11,8 +11,7 @@
 
 =end
 
-
-after post '/widgets/:id' do
+Sinatra::Application.after post '/widgets/:id' do
   puts "jc after - resp"
   puts response.status
   puts '[Params]'
