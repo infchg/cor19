@@ -50,7 +50,7 @@ configure do
     Sinatra::Application.settings.connections.each { |out| out << event }
   end
 
-  jclab={ }
+  jclab= Hash.new {  }
 
 end
 

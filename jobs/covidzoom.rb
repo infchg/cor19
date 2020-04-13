@@ -113,6 +113,7 @@ SCHEDULER.every "5m", :first_in => 0   do |job|
   #
   send_event('thousand', { labels: labels, datasets: thousand, options: opt })
   send_event('hundred', { labels: labels, datasets: hundred})
+  send_event('pbl', { labels: labels, datasets: hundred})
  # send_event('hundred', { labels: labels, datasets: thousand})
 
 end
