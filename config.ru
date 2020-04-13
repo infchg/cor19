@@ -11,7 +11,7 @@ configure do
   set :template_languages, %i[html erb]
 
   #jclab= Hash.new { 'var2' => [] }
-  jclab= Hash.new { }
+  jclab= Hash.new {  []  }
 
   helpers do
     def protected!
