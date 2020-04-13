@@ -17,25 +17,31 @@ configure do
     end
   end
 
+  before '/widgets/:id' do
+    puts '[jc: '
+    puts request.body.read
+    puts 'jc: ]'
+
+
   #jc Sinatra::Application.   post '/widgets/:id' do
   after do 
-    if response.status == 204 
+    if 0 and response.status == 204 
        puts '[Params]'
        p params
        puts body  # JSON.parse(request.body.read)
        puts params['id'],"- after - ]"
        print body
-       puts settings.history.to_yaml
-       puts '[end hist afte]'
-       #rompe if noy yaml puts Sinatra::Application.settings.history[id]
+       ## TENGO ESTO SI : puts settings.history.to_yaml
+       puts '[end afte]'
+       #rompe if no yaml puts Sinatra::Application.settings.history[id]
     end   
   end
 
 
-  #overide
+  #overide  did not
   def send_event(id, body, target=nil)
     body[:id] = id
-    puts "jc -",id, body, target  ## JC OVE NEW
+    puts "jc: --",id, body, target  ## JC OVE NEW
     body[:updatedAt] ||= Time.now.to_i
     event = format_event(body.to_json, target)
     Sinatra::Application.settings.history[id] = event unless target == 'dashboards'
