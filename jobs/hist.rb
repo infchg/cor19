@@ -2,11 +2,11 @@ require 'sinatra'
 use Rack::Logger
 
 set :logger, Logger.new(STDOUT) # STDOUT & STDERR is captured by unicorn
-logger.info('starting hi info')
+Logger.info('starting hi info')
 
 get '/fi' do
   # File.read(File.join('public', 'index.html'))
-  logger.info('query hi info')
+  Logger.info('query hi info')
   settings.history.to_yaml
 end
 
