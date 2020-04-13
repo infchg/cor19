@@ -9,20 +9,23 @@
   puts('query hi info')
   settings.history.to_yaml
 
-after do
-  puts "jc - resp"
-  puts response.status
-end
-
 =end
 
+
+after post '/widgets/:id' do
+  puts "jc after - resp"
+  puts response.status
+  puts '[Params]'
+  p params
+  puts JSON.parse(request.body.read)
+  puts "jc after - ]"
+end
 
 SCHEDULER.every "5m", :first_in => 0   do |job|
 
   puts('jc -- hi info')
-  puts( settings.history.to_yaml)
-  puts('jc -- detailhi info')
-  puts( Sinatra::Application.settings.history.to_yaml)
+#ok  puts( settings.history.to_yaml)
+#OK almacena  puts( Sinatra::Application.settings.history.to_yaml)
 end
 
 #File.write('assets/stylesheets/hi.css', settings.history.to_yaml)
