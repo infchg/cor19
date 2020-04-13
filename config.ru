@@ -29,14 +29,14 @@ configure do
 
   #jc Sinatra::Application.   post '/widgets/:id' do
   after do 
-    if 0 and response.status == 204 
+    if response.status == 204 
        puts '[Params]'
        p params
        puts body  # JSON.parse(request.body.read)
        puts params['id'],"- after - ]"
        print body
        ## TENGO ESTO SI : 
-       puts settings.history.class   to_yaml
+       puts settings.history.class #:w  to_yaml
        puts '[end afte]'
        #rompe if no yaml puts Sinatra::Application.settings.history[id]
     end   
