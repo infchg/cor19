@@ -10,7 +10,8 @@ configure do
   # how to add additional template languages.
   set :template_languages, %i[html erb]
 
-  jclab= Hash.new { 'var2' => [] }
+  #jclab= Hash.new { 'var2' => [] }
+  jclab= Hash.new { }
 
   helpers do
     def protected!
