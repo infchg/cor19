@@ -25,7 +25,7 @@ configure do
        puts body  # JSON.parse(request.body.read)
        puts params['id'],"- after - ]"
        print body
-       puts Sinatra::Application.settings.history[id]
+       #rompe ? puts Sinatra::Application.settings.history[id]
     end   
   end
 

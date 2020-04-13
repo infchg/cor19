@@ -20,9 +20,9 @@ Sinatra::Application.after post '/widgets/:id' do
 end
 =end
 
-SCHEDULER.every "5m", :first_in => 0   do |job|
+SCHEDULER.every "15m", :first_in => 0   do |job|
 
-  puts('jc -- hi info')
+  puts('jc -- hist 15m info')
 #ok  puts( settings.history.to_yaml)
 #OK almacena  puts( Sinatra::Application.settings.history.to_yaml)
 end
