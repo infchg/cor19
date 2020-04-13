@@ -21,7 +21,7 @@ configure do
     puts '[jc: '
     puts request.body.read
     puts 'jc: ]'
-
+  end
 
   #jc Sinatra::Application.   post '/widgets/:id' do
   after do 
