@@ -10,6 +10,8 @@ configure do
   # how to add additional template languages.
   set :template_languages, %i[html erb]
 
+  jclab= Hash.new {  }
+
   helpers do
     def protected!
       # Put any authentication code you want in here.
@@ -20,6 +22,7 @@ configure do
   before '/widgets/:id' do
     puts '[jc: ',params['id']
     puts request.body.read
+    p configure.jclab
     p jclab
     puts 'jc: ]'
   end
@@ -49,8 +52,6 @@ configure do
     Sinatra::Application.settings.history[id] = event unless target == 'dashboards'
     Sinatra::Application.settings.connections.each { |out| out << event }
   end
-
-  jclab= Hash.new {  }
 
 end
 

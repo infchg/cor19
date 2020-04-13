@@ -28,8 +28,8 @@ SCHEDULER.every "5m", :first_in => 0   do |job|
       {
         label: "Inin label",
         data: [14,19,49,17],
-        borderColor: red,
-        backgroundColor: yellow,
+        borderColor: "red",
+        backgroundColor: "yellow",
         borderWidth: 1,
       }
     ]
