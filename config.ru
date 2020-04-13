@@ -3,6 +3,9 @@ require 'dashing'
 configure do
   set :auth_token, 'caUTH_TOKEN'
 
+  set :logging, Logger::INFO
+  #jc
+
   # See http://www.sinatrarb.com/intro.html > Available Template Languages on
   # how to add additional template languages.
   set :template_languages, %i[html erb]
