@@ -23,7 +23,7 @@ configure do
     puts '[jc: ',params['id']
     puts request.body.read
     #p configure.jclab
-    jc[ params['id'] ] =  request.body.read
+    jclab[ params['id'] ] =  request.body.read
 
     p jclab
     puts 'jc: ]'
