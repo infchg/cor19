@@ -24,8 +24,8 @@ configure do
     pid= params['id']
     puts '[jc: par= #{pid} '
     bo= request.body.read
-    $jcliab[ pid ].push( b  )
-    puts "keys= #{$jcliab.keys} len= #{$jcliab.keys} bod= #{b} " 
+    $jcliab[ pid ].push( bo )
+    puts "keys= #{$jcliab.keys} len= #{$jcliab.keys} bod= #{bo} " 
     puts 'jc: ]'
   end
 
