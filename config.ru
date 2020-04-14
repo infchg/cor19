@@ -22,9 +22,11 @@ configure do
 
   before '/widgets/:id' do
     pid= params['id']
-    puts '[jc: par= #{pid} '
+    puts "[jc: par= #{pid} "
     bo= request.body.read
-    $jcliab[ pid ].push( bo )
+    pil=$jcliab[ pid ]
+    pil.push( bo )
+    $jcliab[ pid ]=pil
     puts "keys= #{$jcliab.keys} len= #{$jcliab.keys} bod= #{bo} " 
     puts 'jc: ]'
   end
@@ -32,14 +34,13 @@ configure do
   #jc Sinatra::Application.   post '/widgets/:id' do
   after do 
     if response.status == 204 
-      puts '[after #{params.keys} bodlen=#{body.length} '
-       p params
-       puts body  # JSON.parse(request.body.read)
-       puts "bole=#{body.length} pid=#{params['id']} - after - ]"
+      puts "[after #{params.keys} bodlen=#{body.length} "
+       #vacios p params puts body  # 
+       boo= JSON.parse(request.body.read)
+       puts "bole=#{boo.keys} pid={boo['id']} - after - ]"
        #print body
        ## TENGO ESTO SI : 
-       ## OK Hash 
-       puts settings.history.keys #:w  to_yaml
+       ## OK Hash puts settings.history.keys #:w  to_yaml
        puts ' after]'
        #rompe if no yaml puts Sinatra::Application.settings.history[id]
     end   
