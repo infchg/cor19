@@ -5,13 +5,13 @@ configure do
 
 #  set :logging, Logger::INFO
   #jc
+#jcliab= Hash.new { 'var2' => [] }
+  $jcliab= Hash.new {  []  }
+
 
   # See http://www.sinatrarb.com/intro.html > Available Template Languages on
   # how to add additional template languages.
   set :template_languages, %i[html erb]
-
-  #jclab= Hash.new { 'var2' => [] }
-  $jclab= Hash.new {  []  }
 
   helpers do
     def protected!
@@ -23,10 +23,8 @@ configure do
   before '/widgets/:id' do
     puts '[jc: ',params['id']
     puts request.body.read
-    #p configure.jclab
-    $jclab[ params['id'] ].push(  request.body.read  )
-    puts $jclab.keys
-    print jclab
+    $jcliab[ params['id'] ].push(  request.body.read  )
+    puts $jcliab.keys
     puts 'jc: ]'
   end
 
