@@ -21,20 +21,21 @@ configure do
   end
 
   before '/widgets/:id' do
+    puts "[j:  "
     pid= params['id']
-    puts "[jc: par= #{pid} "
+    puts "j: par= #{pid} "
     bo= request.body.read
     pil=$jcliab[ pid ]
     pil.push( bo )
     $jcliab[ pid ]=pil
     puts "keys= #{$jcliab.keys} len= #{$jcliab.keys} bod= #{bo} " 
-    puts 'jc: ]'
+    puts 'j: ]'
   end
 
   #jc Sinatra::Application.   post '/widgets/:id' do
   after do 
-    if response.status == 204 #ok 
-      puts "[after #{params.keys} " #bodlen=#{  deleted body.length} "
+    if response.status == 204  
+       puts "[after #{params.keys} " #bodlen=#{  deleted body.length} "
        #vacios p params puts body  # 
        request.body.rewind
        boo= JSON.parse(request.body.read)
