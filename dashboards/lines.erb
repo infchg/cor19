@@ -34,12 +34,14 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
     <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
       <div data-id="pcl" data-view ="LineChart" data-left-margin="5"
  data-moreinfo="  group :  pcl ok `"
+        data-datasets='{"label":" new ","data":[14,1,49,17],"borderColor":"white","borderWidth":1}'
       ></div>
     </li>
 
     <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="pdl" data-view ="LineChart" 
  data-moreinfo="  group :  pdl sin margn"
+        data-datasets='[{label:"new",data:[14,1,49,17],borderColor:"white"}]'
       ></div>
     </li>
 
@@ -74,8 +76,6 @@ $(function() { Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},
       <div
         data-id="pil"
   data-view ="LineChart" 
-        data-labels="9:15,9:30,9:45,10:00,10:15,10:30,10:45,11:00"
-data-datasets="156,42,69,64,78,82,192,123"
       ></div>
     </li>
 

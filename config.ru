@@ -33,11 +33,12 @@ configure do
 
   #jc Sinatra::Application.   post '/widgets/:id' do
   after do 
-    if response.status == 204 
-      puts "[after #{params.keys} bodlen=#{body.length} "
+    if response.status == 204 #ok 
+      puts "[after #{params.keys} " #bodlen=#{  deleted body.length} "
        #vacios p params puts body  # 
+       request.body.rewind
        boo= JSON.parse(request.body.read)
-       puts "bole=#{boo.keys} pid={boo['id']} - after - ]"
+       puts "bole=#{boo.keys} pid= #{boo.length} ['id']} - after - ]"
        #print body
        ## TENGO ESTO SI : 
        ## OK Hash puts settings.history.keys #:w  to_yaml
