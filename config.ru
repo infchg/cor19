@@ -11,7 +11,7 @@ configure do
   set :template_languages, %i[html erb]
 
   #jclab= Hash.new { 'var2' => [] }
-  jclab= Hash.new {  []  }
+  $jclab= Hash.new {  []  }
 
   helpers do
     def protected!
@@ -24,16 +24,16 @@ configure do
     puts '[jc: ',params['id']
     puts request.body.read
     #p configure.jclab
-    jclab[ params['id'] ].push(  request.body.read  )
-
-    p jclab
+    $jclab[ params['id'] ].push(  request.body.read  )
+    puts $jclab.keys
+    print jclab
     puts 'jc: ]'
   end
 
   #jc Sinatra::Application.   post '/widgets/:id' do
   after do 
     if response.status == 204 
-       puts '[Params]'
+       puts '[P0arams]'
        p params
        puts body  # JSON.parse(request.body.read)
        puts params['id'],"- after - ]"
