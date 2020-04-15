@@ -16,6 +16,6 @@ s/arriba/sweden/
 s/(16,17,16,23,37,46,63,79,69,76)/\1,73,75,76,87,96,98,95,97,98,107/
 s/(38,40,33,36,59,74,55,48,55,75)/\1,49,50,56,74,53,54,34,70,32,75/
 s/arriba/switz/
-s/,'Apr9'/,'Apr9','Ap10','Ap11','Ap12','Ap13'/
+s/,'Apr9'/,'Apr9','Ap10','Ap11','Ap12','Ap13','Ap14'/
 s|<ul>|COVID19 Daily Tracking to detect improvements or worsening by Country <small> <a href=/covidzoom> ->zoom panels</a></small>\n<ul>|
 s|</ul>|</ul>  \n<small> data source: by John Hopkins. Calculations substracting last day: <a href=http://github.com/infchg/COVID-19/>http://github.com/infchg/COVID-19/</a> </small>|
