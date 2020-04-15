@@ -60,6 +60,7 @@ SCHEDULER.every "5m", :first_in => 0   do |job|
    
    send_event('pbl2', { labels: labels, datasets: data, options: opt })
   send_event('lin2', { labels: labels, datasets: data, options: opt })
+  send_event('linechart3', { labels: labels, datasets: data, options: opt })
   send_event('d1', { labels: 'hoy', datasets: '4' })
   
 #ok  puts( settings.history.to_yaml)
