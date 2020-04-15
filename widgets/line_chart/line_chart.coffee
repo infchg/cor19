@@ -15,7 +15,8 @@ class Dashing.LineChart extends Dashing.Widget
 
     # Lower the chart's height to make space for moreinfo if not empty
     if !!@get('moreinfo')
-      height -= 20
+      ##jc 12 height -= 20
+      height -= 12
 
     $holder = $("<div class='canvas-holder' style='left:#{left}px; top:#{top}px; position:absolute;'></div>")
     $(@node).append $holder
@@ -33,12 +34,13 @@ class Dashing.LineChart extends Dashing.Widget
       }
       options: $.extend({
         responsive: true
-        maintainAspectRatio: true
         legend: {
           display: true
         }
       }, @get('options'))
     });
+    ## jc remove maintainaspect
+    ## was without , , after responsive:true          maintainAspectRatio: true
 
   onData: (data) ->
     # Load new values and update chart
