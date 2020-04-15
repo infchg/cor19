@@ -22,5 +22,5 @@ SCHEDULER.every '10m', :first_in => 0 do |job|
 
   send_event('lin', { labels: labels, datasets: data })
   send_event('linechart2', { labels: labels, datasets: data })
-  send_event('lin2', { labels: labels, datasets: data })
+#  send_event('lin2', { labels: labels, datasets: data })
 end
