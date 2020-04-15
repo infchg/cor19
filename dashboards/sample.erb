@@ -68,7 +68,7 @@
         data-view="Chartjs"
         data-type="scatter"
         data-header="Random points"
-        data-colornames="blue,blue,blue,blue,blue"
+        data-colornames="blue,red,blue,green,blue"
         data-datasets='[{"x": -10, "y": 0}, {"x": 0, "y": 10}, {"x": 10, "y": 5}, {"x": -4, "y": 8}, {"x": 1, "y": -2}, {"x": -1, "y": 3}]'
         data-height="400"
         data-width="400"
@@ -105,7 +105,7 @@
 
 <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
   <div data-id="lin3" data-view ="LineChart" data-left-margin="5" data-top-margin="10"  data-moreinfo="... lin tres "
-        data-datasets='[{"label": "e", "data": "10,39,20,49,87"} ,{"label": "ecinq", "data": "50,35,50,45,57"}]'
+        data-datasets='[{"label": "e", "data": [10,39,20,49,87]} ,{"label": "ecinq", "data": [50,35,50,45,57]}]'
     ></div>
 </li>
 
@@ -126,6 +126,22 @@
         data-width="400"
       ></div>
     </li>
+
+        <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <p>Horizontal linech3 lineChart</p>
+      <div
+        data-id="linechart3"
+        data-view="Chartjs"
+        data-type="line"
+        data-header="Calories Burned"
+        data-labels="Day 1,Day 2,Day 3,Day 4,Day 5"
+        data-colornames="lightgray,lightgray,lightgray,lightgray,lightgray"
+        data-datasets="210,339,220,494,109"
+        data-height="400"
+        data-width="400"
+      ></div>
+    </li>
+
 
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
       <p>Radar Chart</p>
@@ -183,6 +199,12 @@
         data-width="400"
       ></div>
     </li>
+        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="pbl2" data-view ="LineChart" data-left-margin="5"
+ data-moreinfo=" Warning group :  Countries with daily deaths over 100 "
+      ></div>
+    </li>
+
   </ul>
 </div>
 
