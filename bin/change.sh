@@ -7,3 +7,6 @@ git show fe5290:dashboards/covid19.erb  | sed -E -f change.sed  >  ../dashboards
 git commit -am "April update $(date  +%m-%d -d -1day) "
 git diff --stat --cached origin/master
 
+
+#verif
+sed 's|.*\\1,||' change.sed| sed -E 's/[0-9]//g'
